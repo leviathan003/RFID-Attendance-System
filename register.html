@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAG ID Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <a href="#"><img src="back.png" alt="back" style="height: 40px; width: 40px; display: inline; position: relative;"></a>
+    <!-- Back button -->
+
+    <div class="box">
+        <img src="sys.jpg" alt="Illustration" id="image">
+
+        <div class="main">
+            <span>
+                <h2>REGISTER NEW TAG ID FOR CANDIDATE</h2>
+            </span>
+            <form action="#" method="post">
+                <label for="tag">TAG ID:</label>
+                <input type="text" id="tag" name="tag" title="Enter your ID" placeholder="123 321 123" required />
+
+                <label for="Roll">ROLL NO:</label>
+                <input type="text" id="roll" name="Roll" title="Enter Your 08 Digit Roll no." placeholder="XXXXX XX98" maxlength="08"
+                    required /> <!-- maxlength = input no. of digits -->
+
+                <label for="Name">NAME:</label>
+                <input type="text" id="name" name="Name" title="Enter Your Name" placeholder="Robert Kiosk" required />
+
+                <button type="submit" action="Submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
