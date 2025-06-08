@@ -1,4 +1,5 @@
 import sqlite3
+import datetime
 
 DB_NAME = 'student_attendance.db'
 MASTER_TABLE = 'master_attendance'
@@ -87,7 +88,10 @@ def retrieve_daily_attendance(date_str):
         conn.close()
         return records
     except sqlite3.OperationalError as e:
-        create_or_connect_daily_table(date_str)
+        if datetime.datetime.strptime(date_str.replace("_", "/"), "%d/%m/%Y") <= datetime.datetime.now():
+            create_or_connect_daily_table(date_str)
+        else:
+            pass
 
 def get_all_valid_tags():
     conn = sqlite3.connect(DB_NAME)
