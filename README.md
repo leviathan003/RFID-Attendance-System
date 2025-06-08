@@ -52,7 +52,3 @@ This repository contains the final year project on the topic **RFID Attendance S
    flask run
    ```
 8. Open the application in your browser to streamline the RFID attendance procedure.
-
----
-
-Let me know if you'd like to customize it further (e.g. add screenshots, badges, or links)! 🚀
