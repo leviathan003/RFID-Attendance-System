@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFID ATTENDANCE SYSTEM</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/landing_page.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="img_container">
+      <img class="img" src="{{ url_for('static', filename='assets/landing-page-img.svg') }}" />
+    </div>
+    <div class="nav_container">
+      <img class="top-wavy" src="{{ url_for('static', filename='assets/wavy-graphics.svg') }}" alt="">
+      <a  class="btn-1" href="{{ url_for('goToAttendancePage') }}">
+        SCAN FOR ATTENDANCE
+        <div class="go_btn">
+          <img class="btn-logo" src="{{ url_for('static', filename='assets/right-arrow-logo.svg') }}">
+        </div>
+      </a>
+      <a class="btn-2" href="{{ url_for('goToNewEntryPage') }}">
+        SCAN FOR NEW ENTRY
+        <div class="go_btn">
+          <img class="btn-logo" src="{{ url_for('static', filename='assets/right-arrow-logo.svg') }}"/>
+        </div>
+      </a>
+      <img class="bottom-wavy" src="{{ url_for('static', filename='assets/wavy-graphics.svg') }}" alt="">
+    </div>
+  </div>
+</body>
+</html>

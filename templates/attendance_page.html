@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID ATTENDANCE SYSTEM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/attendance_scan_page.css') }}">
+</head>
+<body>
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content" id="popup-box">
+            <p class="popup-label">Date cant be Empty</p>
+            <img src="{{ url_for('static', filename='assets/red-cross.png') }}" id="loader" alt="">
+            <input type="text" id="date-entry" placeholder="ENTER DATE FOR ATTENDANCE (DD/MM/YYYY)">
+            <button id="date-btn" onclick=getTableDataByDate()>SUBMIT</button>
+        </div>
+    </div>
+    <div class="container">
+        <img class="wave-top" src="{{ url_for('static', filename='assets/half-wave.svg') }}" alt="">
+        <div class="instruct-div">
+            <div class="instruct">PUNCH TAG TO REGISTER ATTENDANCE</div>
+        </div>
+        <div class="table-container">
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                    <th>TAG-ID</th>
+                    <th>ROLL-NO</th>
+                    <th>NAME</th>
+                    <th>IN-TIME</th>
+                    <th>OUT-TIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <img class="wave-bottom" src="{{ url_for('static', filename='assets/half-wave.svg') }}" alt="">
+    </div>
+</body>
+<script src="{{ url_for('static', filename='js/attendance_scan_page.js') }}"></script>
+</html>

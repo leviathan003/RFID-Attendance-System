@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID ATTENDANCE SYSTEM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new_entry_scan_page.css') }}">
+</head>
+<body>
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <p class="popup-label">
+                SCANNING TAG ID FOR NEW ENTRY
+            </p>
+            <img class="loader" id="loader" src="{{ url_for('static', filename='assets/loading-logo.svg') }}" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="img_container">
+            <img class="img" src="{{ url_for('static', filename='assets/scan-new-id-img.svg') }}"/>
+        </div>
+        <div class="form_container">
+            <div class="instruct-box">REGISTER NEW TAG ID FOR CANDIDATE</div>
+            <div class="form-area">
+                <form id="inputForm" method="POST">
+                    <div class="input-area">
+                        <div class="input-group">
+                            <label for="tagId">TAG ID</label>
+                            <input type="text" id="tagId" name="tagId" placeholder="" disabled>
+                        </div>
+                        <div class="input-group">
+                            <label for="rollNo">ROLL NO</label>
+                            <input type="text" id="rollNo" name="rollNo" placeholder="">
+                        </div>
+                        <div class="input-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit" class="submit-btn">SUBMIT DETAILS</button>
+                    </div>
+                </form>   
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/js/new_entry_scan_page.js"></script>
+</html>

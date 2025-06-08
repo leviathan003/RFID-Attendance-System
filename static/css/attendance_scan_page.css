@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prata&display=swap');
+
+body{
+    margin: 0px;
+    position: relative;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+}
+.wave-top, .wave-bottom{
+    z-index: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.wave-top{
+    top:0;
+    left: 0;
+}
+.wave-bottom{
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+.instruct{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 7%;
+    width: max-content;
+    text-align: center;
+    border:  1.83px #447AF8 solid ;
+    font-size: 20.44px;
+    color: #447AF8; 
+    font-family: "Inter",'Times New Roman', Times, serif; 
+    font-weight: 600; 
+}
+.table-container{
+    height:70vh;
+    min-width: 90vw;
+    max-width: 90vw;
+    margin-top: 2%;
+    border:  1.83px #447AF8 solid ;
+    overflow-y:auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #447AF8 #ffffff;
+    scroll-behavior: smooth;
+}
+.attendance-table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.attendance-table thead th {
+    position: sticky;
+    top: 0;
+    border: 1px #0b2b74 solid;
+    background-color: #447AF8;
+    padding: 1.5%;
+    flex: 1;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 600;
+}
+.attendance-table tr{
+    width: 100%;
+    display: flex;
+}
+.attendance-table td{
+    border: 1px #447AF8 solid;
+    padding: 1.5%;
+    flex: 1;
+    color: #447AF8;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.popup-content {
+  background: white;
+  padding: 2rem;
+  padding: 3%;
+  width: 30%;
+  border-radius: 8px;
+  border: 2px #365fdd solid;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.popup-content p{
+    font-family: "Inter";
+    font-size: 1rem;
+    color: #365fdd;
+    font-weight: 600;
+    display: none;
+    margin-bottom: 0;
+}
+.popup-content input {
+    width: 100%;
+    text-align: center;
+    padding:1rem;
+    font-size: 1.1rem;
+    color: #365fdd;
+    font-weight: 600;
+    margin-bottom: 6%;
+}
+.popup-content input:focus {
+  outline: none;
+  border: 2px solid #365fdd; 
+}
+.popup-content img{
+    display: none;
+    margin-top: 0;
+    border-radius: 60px;
+}
+.popup-content button{
+    width: 80%;
+    padding: 3%;
+    background-color: #365fdd;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
