@@ -78,13 +78,16 @@ def record_entry_exit(tag_id, time, date_str):
 # Fetch records from a specific date table
 
 def retrieve_daily_attendance(date_str):
-    table_name = f"attendance_{date_str}"
-    conn = sqlite3.connect(DB_NAME)
-    cursor = conn.cursor()
-    cursor.execute(f"SELECT * FROM {table_name}")
-    records = cursor.fetchall()
-    conn.close()
-    return records
+    try:
+        table_name = f"attendance_{date_str}"
+        conn = sqlite3.connect(DB_NAME)
+        cursor = conn.cursor()
+        cursor.execute(f"SELECT * FROM {table_name}")
+        records = cursor.fetchall()
+        conn.close()
+        return records
+    except sqlite3.OperationalError as e:
+        create_or_connect_daily_table(date_str)
 
 def get_all_valid_tags():
     conn = sqlite3.connect(DB_NAME)
