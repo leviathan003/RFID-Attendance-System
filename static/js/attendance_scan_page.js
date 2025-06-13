@@ -118,3 +118,25 @@ setInterval(() => {
         loadTable(date.replace(/\//g, "_"));
     }
 }, 5000);
+
+
+let attendanceInterval = null;
+dateBtn.addEventListener('click', () => {
+    const date = document.getElementById('date-entry').value.trim();
+    if (attendanceInterval) clearInterval(attendanceInterval); 
+    attendanceInterval = setInterval(() => {
+        fetch('/register_attendance', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ date: date })
+        })
+        .then(response => {
+            if (!response.ok) throw new Error("Server error");
+            return response.json();
+        })
+        .catch(error => {
+        });
+    }, 3000);
+});

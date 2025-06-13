@@ -27,7 +27,6 @@ def register_newTagID(tag, roll, name):
                    ,(tag, roll, name))
     conn.commit()
     conn.close()
-    print(str(tag)+name+roll+" Registered")
 
 # Create a new copy of the master table for the day
 
@@ -107,6 +106,7 @@ def get_tag_roll_dict():
     cursor.execute("SELECT tag_id, student_roll FROM master_attendance")
     tag_roll_map = {tag: roll for tag, roll in cursor.fetchall()}
     conn.close()
+    print(tag_roll_map)
     return tag_roll_map
 
 # # Usage example
