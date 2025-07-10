@@ -118,9 +118,9 @@ body{
     width: 100%;
     text-align: center;
     padding:1rem;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color: #365fdd;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 6%;
 }
 .popup-content input:focus {
